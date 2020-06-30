@@ -97,7 +97,7 @@ $.cookie('NameCookie','ValueCookie',{expires:2*365,samesite:'Strict'});
 
 Получение значения печеньки:
 <pre>
-var chek_NameCookie=$.cookie('NameCookie');//получаем печеньку по имени NameCookie с его значением в переменную
+var chek_NameCookie=$.cookie('NameCookie');//получаем печеньку по имени «NameCookie» с его значением в переменную
 </pre>
 Если печенька с именем «NameCookie» существует и имеет какое-то значение, покажем это значение в консоли
 <pre>
