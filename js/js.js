@@ -55,13 +55,13 @@ jQuery(document).ready(function($){
 		$('html').addClass('Beige');SetCookie();
 	});
 	/*проверяем наличие классов у тега html, если есть, удаляем. После чего удаляем печеньку , задав отрицательное время*/
-	$('.buttonReset').click(function(){
-		if($('html').hasClass('White')){$('html').removeClass('White');}
-		if($('html').hasClass('Black')){$('html').removeClass('Black');}
-		if($('html').hasClass('Blue')){$('html').removeClass('Blue');}
-		if($('html').hasClass('Brown')){$('html').removeClass('Brown');}
-		if($('html').hasClass('Beige')){$('html').removeClass('Beige');}
-		$.cookie('colorScheme',$('html').attr('class'),{expires:2*(-365),path:'/',samesite:'Lax',secure:false});
+	$('.buttonReset').click(function(){/*кнопка сброса и удаления печеньки*/
+		if($('html').hasClass('White')){$('html').removeClass('White');}/*удаляем класс White у тега html, если есть*/
+		if($('html').hasClass('Black')){$('html').removeClass('Black');}/*удаляем класс Black у тега html, если есть*/
+		if($('html').hasClass('Blue')){$('html').removeClass('Blue');}/*удаляем класс Blue у тега html, если есть*/
+		if($('html').hasClass('Brown')){$('html').removeClass('Brown');}/*удаляем класс Brown у тега html, если есть*/
+		if($('html').hasClass('Beige')){$('html').removeClass('Beige');}/*удаляем класс Beige у тега html, если есть*/
+		$.cookie('colorScheme',$('html').attr('class'),{expires:2*(-365),path:'/',samesite:'Lax',secure:false});/*удаляем печеньку, установив отрицательное значение жизни куки. Браузер корректно её удалит сам как истекшую*/
 	});
 /*example 1 END*/
 	/*example 2:*/
@@ -92,6 +92,6 @@ jQuery(document).ready(function($){
 	var body_class=$.cookie('Session');if(body_class){$('body').attr('class',body_class);}
 	$('.buttonSession').click(function(){/*Sessional cookie*/
 		$('body').addClass('Session');
-		$.cookie('Session',$('body').attr('class'),{samesite:'Strict'});
+		$.cookie('Session',$('body').attr('class'),{samesite:'Strict'});/*устанавливаем сессию. для этого просто не указываем время жизни куки*/
 	});
 });
