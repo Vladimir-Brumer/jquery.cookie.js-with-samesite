@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>index-example1.html</title>
+</head>
+<body>
+<style type="text/css">
+#wrap{width:80%;margin-left:10%;margin-top:10%;}
+h3{text-indent:20px;}
+#wrap span{display:flex;align-items:center;justify-content:center;}
+.White,.buttonWhite{color:#000;background:#FFF;}
+.Black,.buttonBlack{color:#FFF;background:#000;}
+.Blue,.buttonBlue{color:#063462;background:#9DD1FF;}
+.Brown,.buttonBrown{color:#A9E44D;background:#3B2716;}
+.Beige,.buttonBeige{color:#59422e;background:#f7f3d6;}
+a,.buttonSession,.buttonReset{color:inherit;background:inherit;}
+.Session h2:after{content:"Sessional cookie set";}button{padding:20px 7px;cursor:pointer;}
+</style>
+	<div id="wrap">
+		<center>
+			<h1>jquery.cookie.js with the samesite attribute support</h1>
+			<span><h3><a href="index-example1.html">example1</a></h3><h3><a href="index-example2.html">example2</a></h3><h3><a href="index-example3.html">example3</a></h3></span>
+			<div id="buttons">
+				<button id="White" class="buttonWhite button">White</button>
+				<button id="Black" class="buttonBlack button">Black</button>
+				<button id="Blue" class="buttonBlue button">Blue</button>
+				<button id="Brown" class="buttonBrown button">Brown</button>
+				<button id="Beige" class="buttonBeige button">Beige</button>
+				<button class="buttonSession">Session</button>
+				<button class="buttonReset button">Reset</button>
+			</div>
+			<h2></h2>
+		</center>
+		<div>
+			<h3>Примеры отличаются написанием js кода для функионала переключения (js.js -все примеры; example1.js - вариант первый(самый понятный/доступный/легкий) example2.js - урезаный первый с помощью функций, example3.js - более универсальный вариант)</h3>
+			<h3>Не забываем, что куки устанавливаются для домена. Поэтому после закрытия браузера печенька прочитается, но не установится для index.html файла, но, если заглянуть в инженерную панель, то Мы увидим нашу печеньку, а вот данные Domain печеньки будет пустым. На реальном сайте все будет работать как нужно.</h3>
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.cookie.min.js"></script>
+	<script src="js/example1.js"></script>
+</body>
+</html>
