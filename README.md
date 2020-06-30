@@ -35,8 +35,8 @@ jQuery.cookie = function(name, value, options) {
             expires = '; expires=' + date.toUTCString();
         }
         var path = options.path ? '; path=' + (options.path) : '';
-				var samesite=options.samesite?'; samesite='+(options.samesite):'';
-				//var samesite=options.samesite?'; samesite='+(options.samesite):'; samesite=Lax';//для установки опции samesite со значением Lax автоматически
+	var samesite=options.samesite?'; samesite='+(options.samesite):'';
+	//var samesite=options.samesite?'; samesite='+(options.samesite):'; samesite=Lax';//для установки опции samesite со значением Lax автоматически
         var domain = options.domain ? '; domain=' + (options.domain) : '';
         var secure = options.secure ? '; secure' : '';
         document.cookie = [name, '=', encodeURIComponent(value), expires, samesite, path, domain, secure].join('');
