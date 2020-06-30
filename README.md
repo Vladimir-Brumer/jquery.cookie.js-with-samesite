@@ -115,17 +115,3 @@ $('.buttonReset').click(function(){
 	$.cookie('colorScheme',$('html').attr('class'),{expires:2*(-365),path:'/',samesite:'Lax',secure:false});
 });
 </pre>
-
-The repository was created as an example of how to work with jquery.cookie.js
-Added support for the samesite attribute in jquery.cookie.js.
-Several options for switching to js have been written for easier understanding.
-As an example, a functional for switching color schemes has been created, as in versions for the visually impaired.
-In fact, you can come up with a lot of examples. You can work with classes, as in the examples, but you can create data attributes and further set styles through them. for example, add the image attribute with the value hide to the body tag and set the body styles 
-<pre>
-body[image="hide"] img {display: none !important;}
-</pre>
-Thus, turn off the display of images. Or, by analogy with the presented functionality, add the noimg class and add the 
-<pre>
-.noimg img {display: none;}
-</pre>
-styles. The only limitation is your creativity. Thank.
