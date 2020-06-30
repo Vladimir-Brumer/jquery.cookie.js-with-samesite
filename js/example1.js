@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
 			$('html').attr('class'),/*получаем значение атрибута class у html тега. оно будет храниться в печеньке*/
 			{
 				expires:2*365,/*время жизни печеньки*/
-				path:'/',/*html адрес определенной страницы*/
+				path:'/',/*html адрес определенной страницы. '/' - означает,что печенька будет установлена для всех страниц домена*/
 				samesite:'Lax',/*samesite:'Strict'or'Lax'*/
 				secure:false/*для сайтов на https (с SSL) можно поставить true. в этом случае samesite не обязателен*/
 			});
@@ -17,15 +17,13 @@ jQuery(document).ready(function($){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*example1:*/
 	$('.buttonWhite').click(function(){//жмем на button с классом buttonWhite
-		/*сначало проверим у html тега наличие не нужных классов. Если есть, удаляем*/
-		if($('html').hasClass('Black')){$('html').removeClass('Black');}
-		if($('html').hasClass('Blue')){$('html').removeClass('Blue');}
-		if($('html').hasClass('Brown')){$('html').removeClass('Brown');}
-		if($('html').hasClass('Beige')){$('html').removeClass('Beige');}
-		/*Теперь добавляем html тегу нужный класс*/
-		$('html').addClass('White');
-		/*устанавливаем печеньку*/
-		SetCookie();
+		/*сначало проверим у html тега наличие ненужных классов. Если есть, удаляем*/
+		if($('html').hasClass('Black')){$('html').removeClass('Black');}/*удаляем класс Black у тега html, если есть*/
+		if($('html').hasClass('Blue')){$('html').removeClass('Blue');}/*удаляем класс Blue у тега html, если есть*/
+		if($('html').hasClass('Brown')){$('html').removeClass('Brown');}/*удаляем класс Brown у тега html, если есть*/
+		if($('html').hasClass('Beige')){$('html').removeClass('Beige');}/*удаляем класс Beige у тега html, если есть*/
+		$('html').addClass('White');/*Теперь добавляем html тегу нужный класс*/
+		SetCookie();/*устанавливаем печеньку. Печенька получить значение White, кторый Мы добавили в строке выше*/
 	});
 	/*аналогично для других цветовых схем:*/
 	$('.buttonBlack').click(function(){
