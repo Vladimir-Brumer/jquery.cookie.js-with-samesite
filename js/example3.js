@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 /*example 3:*/
 	var CooseScheme_id=jQuery.cookie('colorScheme'),colorScheme;/*получаем значение печеньки «colorScheme» и создаем пустую переменную «colorScheme»*/
-	/*если печенька есть то обращаемся к button с идентификатором равным этому значению и добавляем этой кнопке класс «ActiveScheme». тегу html добавляем класс со значением печеньки*/
+	/*если печенька есть то обращаемся к button с идентификаторqом равным этому значению и добавляем этой кнопке класс «ActiveScheme». тегу html добавляем класс со значением печеньки*/
 	if(CooseScheme_id){$('#'+CooseScheme_id).addClass('ActiveScheme');$('html').addClass(CooseScheme_id);}
 	$('.button').click(function(){/*жмем на любую кнопку с классом button*/
 			/*ищем в блоке div с идентификатором buttons кнопку с классом «ActiveScheme» и сохраняем её в переменной*/
